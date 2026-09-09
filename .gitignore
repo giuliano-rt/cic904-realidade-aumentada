@@ -1,0 +1,61 @@
+# ------------------------------------------------------------------ Unity ---
+# Pastas geradas pelo editor: nunca devem ir para o repositorio.
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# Cache de pacotes resolvidos
+/[Pp]ackages/com.unity.*/
+
+# Arquivos de solucao e projeto gerados pelo Unity/Rider/VS
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+.vs/
+.idea/
+.vscode/
+
+# Crash reports
+sysinfo.txt
+crashlytics-build.properties
+
+# ---------------------------------------------------------------- Builds ----
+*.apk
+*.aab
+*.apks
+*.unitypackage
+*.unitypackage.meta
+*.app
+bundletool*.jar
+
+# ------------------------------------------------------------- Sensiveis ----
+# A chave de licenca da Vuforia e pessoal: mantenha fora do repositorio.
+# Ela fica em Assets/Resources/VuforiaConfiguration.asset
+Assets/Resources/VuforiaConfiguration.asset
+Assets/Resources/VuforiaConfiguration.asset.meta
+
+# ------------------------------------------------------------- Ferramentas --
+__pycache__/
+*.pyc
+
+# ------------------------------------------------------------------- SO -----
+.DS_Store
+Thumbs.db
+desktop.ini
