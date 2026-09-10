@@ -1,0 +1,117 @@
+{
+  "tema": "Sistema Solar",
+  "perguntas": [
+    {
+      "id": "SOLAR-01",
+      "titulo": "Mercúrio",
+      "corHex": "#9E9E9E",
+      "enunciado": "Mercúrio é o planeta mais próximo do Sol. Por que, mesmo assim, ele NÃO é o planeta mais quente do Sistema Solar?",
+      "alternativas": [
+        "Porque gira rápido demais em torno do próprio eixo",
+        "Porque sua superfície é coberta de gelo permanente",
+        "Porque quase não tem atmosfera para reter o calor",
+        "Porque reflete a maior parte da luz que recebe"
+      ],
+      "correta": 2,
+      "explicacao": "Sem uma atmosfera densa, o calor escapa rapidamente durante a noite. A temperatura varia de cerca de 430 °C de dia a -180 °C à noite."
+    },
+    {
+      "id": "SOLAR-02",
+      "titulo": "Vênus",
+      "corHex": "#E0A64B",
+      "enunciado": "Vênus é o planeta mais quente do Sistema Solar, com cerca de 460 °C. Qual fenômeno explica essa temperatura?",
+      "alternativas": [
+        "Efeito estufa intenso causado pelo CO₂ da atmosfera",
+        "Atividade vulcânica contínua em toda a superfície",
+        "Proximidade maior com o Sol do que Mercúrio",
+        "Colisões constantes de meteoros na superfície"
+      ],
+      "correta": 0,
+      "explicacao": "A atmosfera de Vênus tem mais de 96% de dióxido de carbono, que aprisiona o calor e mantém o planeta mais quente que Mercúrio."
+    },
+    {
+      "id": "SOLAR-03",
+      "titulo": "Terra",
+      "corHex": "#3A7BD5",
+      "enunciado": "Aproximadamente qual porcentagem da superfície da Terra é coberta por água?",
+      "alternativas": [
+        "Cerca de 50%",
+        "Cerca de 61%",
+        "Cerca de 71%",
+        "Cerca de 88%"
+      ],
+      "correta": 2,
+      "explicacao": "Cerca de 71% da superfície terrestre é coberta por água, e mais de 96% dela está nos oceanos."
+    },
+    {
+      "id": "SOLAR-04",
+      "titulo": "Marte",
+      "corHex": "#C1440E",
+      "enunciado": "Marte é conhecido como o Planeta Vermelho. O que dá essa cor à sua superfície?",
+      "alternativas": [
+        "Vegetação avermelhada resistente ao frio",
+        "Óxido de ferro (ferrugem) no solo e na poeira",
+        "Reflexo da luz do Sol na atmosfera de metano",
+        "Lava exposta dos vulcões ainda ativos"
+      ],
+      "correta": 1,
+      "explicacao": "O solo marciano é rico em óxido de ferro. A poeira suspensa na atmosfera espalha essa cor por todo o planeta."
+    },
+    {
+      "id": "SOLAR-05",
+      "titulo": "Júpiter",
+      "corHex": "#B07A3C",
+      "enunciado": "A Grande Mancha Vermelha de Júpiter é, na verdade, o quê?",
+      "alternativas": [
+        "Uma cratera gigante de impacto",
+        "Um oceano de metano líquido",
+        "A sombra projetada por sua maior lua",
+        "Uma tempestade que dura há séculos"
+      ],
+      "correta": 3,
+      "explicacao": "É um anticiclone observado desde o século XVII, maior que o diâmetro da Terra, embora venha encolhendo nas últimas décadas."
+    },
+    {
+      "id": "SOLAR-06",
+      "titulo": "Saturno",
+      "corHex": "#D4B483",
+      "enunciado": "Os anéis de Saturno são formados principalmente por qual material?",
+      "alternativas": [
+        "Blocos de gelo e fragmentos de rocha",
+        "Gases comprimidos em alta velocidade",
+        "Poeira magnética presa pelo campo do planeta",
+        "Fragmentos metálicos de asteroides capturados"
+      ],
+      "correta": 0,
+      "explicacao": "Os anéis são bilhões de partículas de gelo de água e rocha, que vão do tamanho de grãos de areia a blocos de vários metros."
+    },
+    {
+      "id": "SOLAR-07",
+      "titulo": "Urano",
+      "corHex": "#4FB0C6",
+      "enunciado": "O que torna a rotação de Urano diferente de todos os outros planetas?",
+      "alternativas": [
+        "Ele não gira em torno do próprio eixo",
+        "Ele gira deitado, com o eixo inclinado quase 98°",
+        "Ele completa uma rotação em menos de uma hora",
+        "Ele gira em sentido contrário à sua órbita"
+      ],
+      "correta": 1,
+      "explicacao": "Urano gira praticamente de lado, provavelmente após uma grande colisão. Por isso seus polos apontam alternadamente para o Sol."
+    },
+    {
+      "id": "SOLAR-08",
+      "titulo": "Netuno",
+      "corHex": "#2E5EAA",
+      "enunciado": "Netuno detém qual recorde no Sistema Solar?",
+      "alternativas": [
+        "O maior número de luas conhecidas",
+        "O dia mais curto entre os planetas",
+        "Os ventos mais rápidos já medidos",
+        "A maior densidade entre os gigantes gasosos"
+      ],
+      "correta": 2,
+      "explicacao": "Os ventos de Netuno chegam a cerca de 2.100 km/h, mais rápidos que a velocidade do som na Terra."
+    }
+  ]
+}
