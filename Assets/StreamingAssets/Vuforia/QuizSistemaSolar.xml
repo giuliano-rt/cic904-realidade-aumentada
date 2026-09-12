@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="SOLAR-01" size="0.095000 0.133000" />
+  </Tracking>
+</QCARConfig>
