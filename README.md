@@ -10,8 +10,11 @@ acerto ou erro com uma explicação, e acumula pontos ao longo das 8 cartas.
 
 **Tema do conteúdo:** Sistema Solar.
 
-<!-- TODO antes da entrega final: substituir por um GIF real do jogo rodando -->
-<!-- ![Demonstração](docs/img/demo.gif) -->
+![Painel do quiz em execução](docs/img/quiz_painel.png)
+
+*Pergunta aberta após o reconhecimento de uma carta, com pontuação, barra de
+progresso e o retorno da resposta anterior. <!-- TODO: trocar por um GIF com a
+câmera e a carta física, depois que a Vuforia estiver integrada -->*
 
 ---
 

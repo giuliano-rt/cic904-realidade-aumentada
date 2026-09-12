@@ -56,7 +56,8 @@ namespace ARQuiz.UI
 
             if (textoProgresso != null)
             {
-                textoProgresso.text = $"{acertos} acertos  ·  {respondidas}/{total} cartas";
+                string rotuloAcertos = acertos == 1 ? "1 acerto" : $"{acertos} acertos";
+                textoProgresso.text = $"{rotuloAcertos}  ·  {respondidas}/{total} cartas";
             }
 
             if (barraProgresso != null)
