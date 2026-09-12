@@ -66,8 +66,14 @@ Roteiro completo, do projeto vazio até o APK. Segue a mesma sequência da
 2. Entre no database → **Add Target** para cada uma das 8 cartas:
    - Type: **Image**
    - File: `cartas/SOLAR-01_Mercurio.png` (e assim por diante)
-   - Width: `0.15` (metros — o tamanho real que a carta terá impressa)
+   - Width: **`0.095`** (metros — a largura real da carta impressa)
    - **Name: `SOLAR-01`** ← 🔴 **exatamente igual ao `id` do `perguntas.json`**
+
+> **Sobre o `Width`:** é a largura real da imagem depois de impressa, e é ela
+> que define a escala do objeto 3D sobre a carta. Nas folhas A4 geradas por
+> `tools/gerar_cartas.py`, cada carta tem 9,5 cm de largura (1120 px de uma
+> folha de 2480 px a 210 mm). Se você imprimir os PNGs individuais em vez das
+> folhas, meça com uma régua e use o valor medido.
 
 > **O `Name` é a peça central.** O script `MarcadorPergunta` usa o nome do target
 > para procurar a pergunta no JSON. Se você digitar `Solar 01` ou `mercurio`,
