@@ -10,11 +10,15 @@ acerto ou erro com uma explicação, e acumula pontos ao longo das 8 cartas.
 
 **Tema do conteúdo:** Sistema Solar.
 
-![Painel do quiz em execução](docs/img/quiz_painel.png)
+![Carta reconhecida com a pergunta aberta](docs/img/ar_pergunta.png)
 
-*Pergunta aberta após o reconhecimento de uma carta, com pontuação, barra de
-progresso e o retorno da resposta anterior. <!-- TODO: trocar por um GIF com a
-câmera e a carta física, depois que a Vuforia estiver integrada -->*
+*Carta impressa reconhecida pela webcam: o planeta em 3D flutua sobre o
+marcador e a pergunta correspondente abre na tela.*
+
+![Retorno da resposta](docs/img/ar_resposta.png)
+
+*Resposta errada: a alternativa escolhida fica vermelha, a correta é destacada
+em verde e a faixa superior traz a explicação do conteúdo.*
 
 ---
 
