@@ -42,7 +42,7 @@ acerto ou erro com uma explicação, e acumula pontos ao longo das 8 cartas.
 
 | Camada | Tecnologia |
 |---|---|
-| Motor | Unity 6 (`6000.3.10f1`), Universal Render Pipeline |
+| Motor | Unity 6 LTS (`6000.0.x`), Universal Render Pipeline |
 | Realidade Aumentada | Vuforia Engine — *Image Targets* (rastreamento por marcador) |
 | Linguagem do jogo | C# |
 | Interface | Unity UI (uGUI) + TextMeshPro |
@@ -124,7 +124,9 @@ dá para acrescentar perguntas sem tocar em nenhuma linha de C#.
 
 ### Requisitos
 
-- **Unity 6** (`6000.3.10f1`) com **Android Build Support** (SDK + NDK + JDK)
+- **Unity 6 LTS**, linha `6000.0.x` (mínimo `6000.0.38f1`, conforme a tabela
+  de compatibilidade da Vuforia)
+- **Android Build Support** (SDK + NDK + JDK) — apenas para gerar o APK
 - **Vuforia Engine** — https://developer.vuforia.com/downloads/sdk
 - Conta gratuita na Vuforia (para a *App License Key* e o *Target Manager*)
 - **Python 3** com **Pillow** — apenas para regerar as cartas

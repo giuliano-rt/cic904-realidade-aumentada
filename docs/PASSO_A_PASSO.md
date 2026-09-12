@@ -10,25 +10,37 @@ Roteiro completo, do projeto vazio até o APK. Segue a mesma sequência da
 
 ## 0. Antes de começar
 
-| Item | Onde conseguir |
-|---|---|
-| Unity 6 (`6000.3.10f1` já instalado) | Unity Hub |
-| Módulo **Android Build Support** (+ SDK, NDK, JDK) | Unity Hub → Installs → engrenagem → Add modules |
-| Conta Vuforia | https://developer.vuforia.com |
-| `bundletool.jar` | https://github.com/google/bundletool/releases |
+| Item | Onde conseguir | Quando precisa |
+|---|---|---|
+| **Unity 6 LTS — linha `6000.0.x`** (mínimo `6000.0.38f1`) | Unity Hub → Installs → Install Editor | sempre |
+| Conta Vuforia + *App License Key* | https://developer.vuforia.com | sempre |
+| Módulo **Android Build Support** (+ SDK, NDK, JDK) | marque junto com a instalação do editor | só para o APK |
+| `bundletool.jar` | https://github.com/google/bundletool/releases | só para o APK |
 
-> ⚠️ **Confira a versão suportada.** A página de download da Vuforia Engine lista
-> as versões da Unity suportadas. Se a `6000.3.10f1` não estiver na lista, instale
-> a **Unity 6 LTS (6000.0.x)** pelo Hub — é a combinação mais segura. Descobrir
-> isso agora custa 10 minutos; descobrir na véspera da entrega custa o projeto.
+> ⚠️ **A versão da Unity importa.** A tabela de compatibilidade da Vuforia
+> (*Mobile Devices → Developer Tools*) pede **Unity Editor 6 LTS `6.0.38f1+`**,
+> ou seja, a linha `6000.0.x`. Versões como `6000.3.x` e `6000.5.x` são
+> posteriores, mas pertencem a outras linhas (Unity 6.3 e 6.5) e não são as que
+> a Vuforia declara suportar.
+>
+> Vale testar com o que já estiver instalado — costuma funcionar —, mas **deixe
+> o download da `6000.0.x` correndo em paralelo**, para não descobrir uma
+> incompatibilidade sem tempo de reagir.
+
+> 💡 **Android só é necessário para o APK.** O fluxo da Vuforia roda no editor
+> com a webcam do PC (passo 7). Para uma apresentação em laboratório dá para
+> demonstrar o jogo inteiro sem nenhum módulo de Android instalado — o que
+> economiza vários GB de download.
 
 ---
 
 ## 1. Criar o projeto
 
 1. Unity Hub → **New project** → template **Universal 3D** → nome `ARQuizQR`.
-2. `File → Build Profiles` → selecione **Android** → **Switch Platform**.
-   (Fazer isso agora evita reimportar todos os assets depois.)
+2. *(só se for gerar o APK agora)* `File → Build Profiles` → **Android** →
+   **Switch Platform**. Fazer isso antes de importar tudo evita reimportar os
+   assets depois. Sem o módulo de Android instalado, a plataforma não aparece —
+   siga em **Windows** mesmo, que o projeto roda igual no editor.
 
 ---
 
