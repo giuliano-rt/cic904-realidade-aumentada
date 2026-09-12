@@ -191,12 +191,3 @@ pontos e traços nas laterais, gerada de forma determinística a partir do `id`.
 São esses elementos que empurram a avaliação dos alvos no *Target Manager* para
 4–5 estrelas e deixam o rastreamento estável.
 
----
-
-## Equipe
-
-<!-- TODO: preencher com os nomes dos integrantes -->
-
-| Integrante | Responsabilidade |
-|---|---|
-| | |
