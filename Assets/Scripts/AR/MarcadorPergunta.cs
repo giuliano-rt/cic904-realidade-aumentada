@@ -1,3 +1,11 @@
+// Este script depende da Vuforia Engine, que e distribuida como um
+// .unitypackage baixado do portal do desenvolvedor e nao pode ser resolvida
+// automaticamente. O guard abaixo deixa o projeto compilar antes dela existir.
+//
+// Depois de importar a Vuforia, ative o simbolo VUFORIA_PRESENT em
+// Edit -> Project Settings -> Player -> Other Settings -> Scripting Define Symbols.
+#if VUFORIA_PRESENT
+
 using ARQuiz.Core;
 using UnityEngine;
 using Vuforia;
@@ -104,3 +112,5 @@ namespace ARQuiz.AR
         }
     }
 }
+
+#endif // VUFORIA_PRESENT
