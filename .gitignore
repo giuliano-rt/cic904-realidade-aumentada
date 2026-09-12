@@ -62,3 +62,7 @@ desktop.ini
 
 # Area temporaria enquanto a Vuforia nao e importada
 .pendente-vuforia/
+
+# SDK da Vuforia: 132 MB e acima do limite de 100 MB por arquivo do GitHub.
+# Baixe em https://developer.vuforia.com/downloads/sdk e importe no projeto.
+Packages/*.tgz
