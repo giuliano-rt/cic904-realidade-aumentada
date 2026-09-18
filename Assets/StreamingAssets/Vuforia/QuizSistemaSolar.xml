@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="SOLAR-08" size="0.095000 0.133000" />
+    <ImageTarget name="SOLAR-07" size="0.095000 0.133000" />
+    <ImageTarget name="SOLAR-06" size="0.095000 0.133000" />
+    <ImageTarget name="SOLAR-05" size="0.095000 0.133000" />
+    <ImageTarget name="SOLAR-04" size="0.095000 0.133000" />
+    <ImageTarget name="SOLAR-03" size="0.095000 0.133000" />
+    <ImageTarget name="SOLAR-02" size="0.095000 0.133000" />
     <ImageTarget name="SOLAR-01" size="0.095000 0.133000" />
   </Tracking>
 </QCARConfig>
