@@ -26,6 +26,13 @@ namespace ARQuiz.UI
             if (botaoReiniciar != null)
             {
                 botaoReiniciar.onClick.AddListener(AoClicarReiniciar);
+
+                var rotulo = botaoReiniciar.GetComponentInChildren<TMP_Text>();
+                if (rotulo != null)
+                {
+                    rotulo.text = "Jogar de novo";
+                }
+                botaoReiniciar.gameObject.SetActive(false);
             }
         }
 
@@ -63,6 +70,15 @@ namespace ARQuiz.UI
             if (barraProgresso != null)
             {
                 barraProgresso.fillAmount = total > 0 ? (float)respondidas / total : 0f;
+            }
+
+            // O botao so aparece quando a partida acabou, e vira "Jogar de novo".
+            // Um botao desabilitado no meio da partida so geraria a pergunta
+            // "por que nao consigo clicar?"; escondido, a pergunta nem surge.
+            if (botaoReiniciar != null)
+            {
+                bool terminou = total > 0 && respondidas >= total;
+                botaoReiniciar.gameObject.SetActive(terminou);
             }
         }
 

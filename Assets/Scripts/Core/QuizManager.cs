@@ -61,6 +61,13 @@ namespace ARQuiz.Core
         public int Respondidas => _respondidas.Count;
         public string Tema { get; private set; }
 
+        /// <summary>
+        /// A partida so pode recomecar depois que todas as cartas forem respondidas.
+        /// Sem essa regra, o jogador poderia errar uma pergunta, reiniciar e responder
+        /// de novo valendo os pontos cheios.
+        /// </summary>
+        public bool PodeReiniciar => Total > 0 && Respondidas >= Total;
+
         // --- Ciclo de vida ----------------------------------------------------
         private void Awake()
         {
@@ -200,9 +207,17 @@ namespace ARQuiz.Core
             return acertou;
         }
 
-        /// <summary>Zera o progresso sem recarregar a cena.</summary>
+        /// <summary>Comeca uma partida nova. So funciona ao fim da partida atual.</summary>
         public void Reiniciar()
         {
+            // A regra fica aqui, e nao so na interface: mesmo que algum botao chame
+            // este metodo no meio da partida, o placar nao e apagado.
+            if (!PodeReiniciar)
+            {
+                Debug.Log($"[QuizManager] Reiniciar recusado: {Respondidas}/{Total} cartas respondidas.");
+                return;
+            }
+
             _respondidas.Clear();
             _marcadorAtivo = null;
             Pontos = 0;
