@@ -328,15 +328,25 @@ def _penalidade(m, size):
 
 
 # ------------------------------------------------------------ API publica ---
-def gerar_matriz(texto, min_version=1):
-    """Codifica 'texto' e devolve a matriz final do QR (lista de listas 0/1)."""
+def gerar_matriz(texto, min_version=1, mascara=None):
+    """Codifica 'texto' e devolve a matriz final do QR (lista de listas 0/1).
+
+    Por padrao escolhe, entre as 8 mascaras, a de menor penalidade -- o que o
+    padrao recomenda. Passar 'mascara' (0 a 7) forca uma mascara especifica.
+    Qualquer uma e valida: o leitor descobre qual foi usada pela informacao de
+    formato gravada no proprio codigo.
+
+    Forcar a mascara serve para deixar QRs de conteudo parecido com aparencia
+    diferente: e a mascara que domina o visual do miolo do codigo.
+    """
     dados = texto.encode("utf-8")
     versao = _escolher_versao(len(dados), min_version)
     codewords = _bitstream(dados, versao)
     bits = _intercalar(codewords, versao)
 
+    candidatas = range(8) if mascara is None else [mascara]
     melhor, melhor_nota = None, None
-    for mascara in range(8):
+    for mascara in candidatas:
         m, reservado, size = _matriz_base(versao)
         _colocar_dados(m, reservado, size, bits)
         for r in range(size):

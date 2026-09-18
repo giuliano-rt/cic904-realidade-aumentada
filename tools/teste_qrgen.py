@@ -114,5 +114,22 @@ for caso in CASOS:
         print(f"{marca} v{versao} mascara={mascara} {len(m)}x{len(m)} "
               f"{caso!r} -> {lido!r}")
 
+# Mascara forcada: as cartas v2 dao uma mascara diferente a cada planeta.
+# Cada uma precisa gerar um QR valido e o leitor precisa identifica-la.
+print()
+for forcada in range(8):
+    caso = f"SOLAR-0{forcada + 1}"
+    m = qrgen.gerar_matriz(caso, min_version=2, mascara=forcada)
+    try:
+        lido, versao, mascara = decodificar(m)
+    except Exception as e:
+        print(f"ERRO   mascara forcada {forcada}: {e}")
+        falhas += 1
+        continue
+    ok = lido == caso and mascara == forcada
+    falhas += 0 if ok else 1
+    print(f"{'ok  ' if ok else 'FALHA'} mascara forcada {forcada} -> lida {mascara}, "
+          f"{caso!r} -> {lido!r}")
+
 print()
 print("TODOS OS TESTES PASSARAM" if falhas == 0 else f"{falhas} FALHA(S)")
