@@ -66,3 +66,9 @@ desktop.ini
 # SDK da Vuforia: 132 MB e acima do limite de 100 MB por arquivo do GitHub.
 # Baixe em https://developer.vuforia.com/downloads/sdk e importe no projeto.
 Packages/*.tgz
+
+# Previas de conferencia geradas pelas ferramentas
+tools/_previa*.png
+
+# Cache de execucao da Vuforia (QCAR e o nome antigo do SDK), gerado ao rodar no Editor
+/QCAR/
