@@ -60,7 +60,29 @@ Roteiro completo, do projeto vazio até o APK. Segue a mesma sequência da
 2. Copie a **App License Key**.
 3. Na Unity: `Window → Vuforia Configuration` → cole em **App License Key**.
 
-### 3.2 Banco de alvos
+### 3.2 Rastreamento — duas configurações obrigatórias
+
+Ainda em `Window → Vuforia Configuration`:
+
+| Campo | Valor | Padrão |
+|---|---|---|
+| **Max Simultaneous Tracked Images** | `8` | 1 |
+| **Device Tracker → Auto Start Tracker** | desmarcado | marcado |
+
+> ⚠️ **Sem essas duas mudanças o jogo reconhece a carta errada.** Elas ficam no
+> `VuforiaConfiguration.asset`, o mesmo arquivo da chave de licença, que está no
+> `.gitignore` — então **não vêm junto com o repositório** e precisam ser refeitas
+> em cada máquina.
+>
+> - Com **1 imagem simultânea**, a carta que acabou de sair de vista continua
+>   ocupando o único espaço, e a Vuforia passa a "rastrear" a carta nova como se
+>   fosse a antiga.
+> - Com o **rastreamento do dispositivo** ligado, uma carta que sai de vista vira
+>   `EXTENDED_TRACKED` — a Vuforia estima onde ela estaria. Na webcam, sem sensores
+>   de movimento, isso é só um palpite, e deixa os planetas já vistos flutuando
+>   na tela.
+
+### 3.3 Banco de alvos
 1. No site: **My Account → Target Manager → Add Database**.
    - Nome: `QuizSistemaSolar` · Tipo: **Device**
 2. Entre no database → **Add Target** para cada uma das 8 cartas:

@@ -1743,7 +1743,6 @@ GameObject:
   m_Component:
   - component: {fileID: 559584728}
   - component: {fileID: 559584727}
-  - component: {fileID: 559584726}
   - component: {fileID: 559584725}
   - component: {fileID: 559584729}
   m_Layer: 0
@@ -1767,50 +1766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idPergunta: 
   conteudoVirtual: {fileID: 1010963637}
---- !u!114 &559584726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 559584724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StatusFilter: 1
-  UsePoseSmoothing: 0
-  AnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 3.3333333
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
-      value: 1
-      inSlope: 3.3333333
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  OnTargetFound:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTargetLost:
-    m_PersistentCalls:
-      m_Calls: []
+  segundosTolerancia: 0.6
 --- !u!114 &559584727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1868,7 +1824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 559584727}
   mHiddenRoot: {fileID: 0}
-  mTargetName: SOLAR-08
+  mTargetName: SOLAR-05
   mDatasetName: Vuforia/QuizSistemaSolar.xml
   mCastedBehaviour: {fileID: 559584727}
   mMeshFilter: {fileID: 0}
@@ -2142,7 +2098,6 @@ GameObject:
   m_Component:
   - component: {fileID: 683247025}
   - component: {fileID: 683247024}
-  - component: {fileID: 683247023}
   - component: {fileID: 683247022}
   - component: {fileID: 683247026}
   m_Layer: 0
@@ -2166,50 +2121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idPergunta: 
   conteudoVirtual: {fileID: 1961896782}
---- !u!114 &683247023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 683247021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StatusFilter: 1
-  UsePoseSmoothing: 0
-  AnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 3.3333333
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
-      value: 1
-      inSlope: 3.3333333
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  OnTargetFound:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTargetLost:
-    m_PersistentCalls:
-      m_Calls: []
+  segundosTolerancia: 0.6
 --- !u!114 &683247024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2267,7 +2179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 683247024}
   mHiddenRoot: {fileID: 0}
-  mTargetName: SOLAR-08
+  mTargetName: SOLAR-02
   mDatasetName: Vuforia/QuizSistemaSolar.xml
   mCastedBehaviour: {fileID: 683247024}
   mMeshFilter: {fileID: 0}
@@ -3385,7 +3297,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1206087374}
   - component: {fileID: 1206087373}
-  - component: {fileID: 1206087372}
   - component: {fileID: 1206087371}
   - component: {fileID: 1206087375}
   m_Layer: 0
@@ -3409,50 +3320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idPergunta: 
   conteudoVirtual: {fileID: 1583422458}
---- !u!114 &1206087372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1206087370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StatusFilter: 1
-  UsePoseSmoothing: 0
-  AnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 3.3333333
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
-      value: 1
-      inSlope: 3.3333333
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  OnTargetFound:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTargetLost:
-    m_PersistentCalls:
-      m_Calls: []
+  segundosTolerancia: 0.6
 --- !u!114 &1206087373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3510,7 +3378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1206087373}
   mHiddenRoot: {fileID: 0}
-  mTargetName: SOLAR-08
+  mTargetName: SOLAR-03
   mDatasetName: Vuforia/QuizSistemaSolar.xml
   mCastedBehaviour: {fileID: 1206087373}
   mMeshFilter: {fileID: 0}
@@ -3525,7 +3393,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1211542540}
   - component: {fileID: 1211542539}
-  - component: {fileID: 1211542538}
   - component: {fileID: 1211542537}
   - component: {fileID: 1211542541}
   m_Layer: 0
@@ -3549,50 +3416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idPergunta: 
   conteudoVirtual: {fileID: 55660102}
---- !u!114 &1211542538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1211542536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StatusFilter: 1
-  UsePoseSmoothing: 0
-  AnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 3.3333333
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
-      value: 1
-      inSlope: 3.3333333
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  OnTargetFound:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTargetLost:
-    m_PersistentCalls:
-      m_Calls: []
+  segundosTolerancia: 0.6
 --- !u!114 &1211542539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3802,7 +3626,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1217626973}
   - component: {fileID: 1217626972}
-  - component: {fileID: 1217626971}
   - component: {fileID: 1217626969}
   - component: {fileID: 1217626974}
   m_Layer: 0
@@ -3826,50 +3649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idPergunta: 
   conteudoVirtual: {fileID: 1813213863}
---- !u!114 &1217626971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1217626968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StatusFilter: 1
-  UsePoseSmoothing: 0
-  AnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 3.3333333
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
-      value: 1
-      inSlope: 3.3333333
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  OnTargetFound:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTargetLost:
-    m_PersistentCalls:
-      m_Calls: []
+  segundosTolerancia: 0.6
 --- !u!114 &1217626972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3942,7 +3722,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1219110462}
   - component: {fileID: 1219110461}
-  - component: {fileID: 1219110460}
   - component: {fileID: 1219110459}
   - component: {fileID: 1219110463}
   m_Layer: 0
@@ -3966,50 +3745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idPergunta: 
   conteudoVirtual: {fileID: 1034677966}
---- !u!114 &1219110460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1219110458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StatusFilter: 1
-  UsePoseSmoothing: 0
-  AnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 3.3333333
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
-      value: 1
-      inSlope: 3.3333333
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  OnTargetFound:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTargetLost:
-    m_PersistentCalls:
-      m_Calls: []
+  segundosTolerancia: 0.6
 --- !u!114 &1219110461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4067,7 +3803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1219110461}
   mHiddenRoot: {fileID: 0}
-  mTargetName: SOLAR-08
+  mTargetName: SOLAR-04
   mDatasetName: Vuforia/QuizSistemaSolar.xml
   mCastedBehaviour: {fileID: 1219110461}
   mMeshFilter: {fileID: 0}
@@ -4294,7 +4030,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1282554902}
   - component: {fileID: 1282554901}
-  - component: {fileID: 1282554900}
   - component: {fileID: 1282554899}
   - component: {fileID: 1282554903}
   m_Layer: 0
@@ -4318,50 +4053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idPergunta: 
   conteudoVirtual: {fileID: 654790730}
---- !u!114 &1282554900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1282554898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StatusFilter: 1
-  UsePoseSmoothing: 0
-  AnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 3.3333333
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
-      value: 1
-      inSlope: 3.3333333
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  OnTargetFound:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTargetLost:
-    m_PersistentCalls:
-      m_Calls: []
+  segundosTolerancia: 0.6
 --- !u!114 &1282554901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4419,7 +4111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1282554901}
   mHiddenRoot: {fileID: 0}
-  mTargetName: SOLAR-08
+  mTargetName: SOLAR-06
   mDatasetName: Vuforia/QuizSistemaSolar.xml
   mCastedBehaviour: {fileID: 1282554901}
   mMeshFilter: {fileID: 0}
@@ -5439,7 +5131,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1996719041}
   - component: {fileID: 1996719040}
-  - component: {fileID: 1996719039}
   - component: {fileID: 1996719038}
   - component: {fileID: 1996719042}
   m_Layer: 0
@@ -5463,50 +5154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idPergunta: 
   conteudoVirtual: {fileID: 170407865}
---- !u!114 &1996719039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1996719037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StatusFilter: 1
-  UsePoseSmoothing: 0
-  AnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 3.3333333
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
-      value: 1
-      inSlope: 3.3333333
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  OnTargetFound:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTargetLost:
-    m_PersistentCalls:
-      m_Calls: []
+  segundosTolerancia: 0.6
 --- !u!114 &1996719040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5564,7 +5212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1996719040}
   mHiddenRoot: {fileID: 0}
-  mTargetName: SOLAR-08
+  mTargetName: SOLAR-07
   mDatasetName: Vuforia/QuizSistemaSolar.xml
   mCastedBehaviour: {fileID: 1996719040}
   mMeshFilter: {fileID: 0}
