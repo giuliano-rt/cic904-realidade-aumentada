@@ -1745,6 +1745,7 @@ GameObject:
   - component: {fileID: 559584727}
   - component: {fileID: 559584726}
   - component: {fileID: 559584725}
+  - component: {fileID: 559584729}
   m_Layer: 0
   m_Name: SOLAR-05
   m_TagString: Untagged
@@ -1826,7 +1827,7 @@ MonoBehaviour:
   RuntimeOcclusion: 0
   RuntimeCollider: 0
   mTrackableName: SOLAR-05
-  mInitializedInEditor: 0
+  mInitializedInEditor: 1
   mDataSetPath: Vuforia/QuizSistemaSolar.xml
   mAspectRatio: 1.4
   mImageTargetType: 0
@@ -1835,8 +1836,8 @@ MonoBehaviour:
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
-  mTrackingOptimizationNeedsUpgrade: 1
-  mPreview: {fileID: 0}
+  mTrackingOptimizationNeedsUpgrade: 0
+  mPreview: {fileID: 559584729}
 --- !u!4 &559584728
 Transform:
   m_ObjectHideFlags: 0
@@ -1853,6 +1854,25 @@ Transform:
   - {fileID: 1010963639}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &559584729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559584724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 559584727}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: SOLAR-08
+  mDatasetName: Vuforia/QuizSistemaSolar.xml
+  mCastedBehaviour: {fileID: 559584727}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &580403425
 GameObject:
   m_ObjectHideFlags: 0
@@ -2124,6 +2144,7 @@ GameObject:
   - component: {fileID: 683247024}
   - component: {fileID: 683247023}
   - component: {fileID: 683247022}
+  - component: {fileID: 683247026}
   m_Layer: 0
   m_Name: SOLAR-02
   m_TagString: Untagged
@@ -2205,7 +2226,7 @@ MonoBehaviour:
   RuntimeOcclusion: 0
   RuntimeCollider: 0
   mTrackableName: SOLAR-02
-  mInitializedInEditor: 0
+  mInitializedInEditor: 1
   mDataSetPath: Vuforia/QuizSistemaSolar.xml
   mAspectRatio: 1.4
   mImageTargetType: 0
@@ -2214,8 +2235,8 @@ MonoBehaviour:
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
-  mTrackingOptimizationNeedsUpgrade: 1
-  mPreview: {fileID: 0}
+  mTrackingOptimizationNeedsUpgrade: 0
+  mPreview: {fileID: 683247026}
 --- !u!4 &683247025
 Transform:
   m_ObjectHideFlags: 0
@@ -2232,6 +2253,25 @@ Transform:
   - {fileID: 1961896784}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &683247026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683247021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 683247024}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: SOLAR-08
+  mDatasetName: Vuforia/QuizSistemaSolar.xml
+  mCastedBehaviour: {fileID: 683247024}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &759868863
 GameObject:
   m_ObjectHideFlags: 0
@@ -3347,6 +3387,7 @@ GameObject:
   - component: {fileID: 1206087373}
   - component: {fileID: 1206087372}
   - component: {fileID: 1206087371}
+  - component: {fileID: 1206087375}
   m_Layer: 0
   m_Name: SOLAR-03
   m_TagString: Untagged
@@ -3428,7 +3469,7 @@ MonoBehaviour:
   RuntimeOcclusion: 0
   RuntimeCollider: 0
   mTrackableName: SOLAR-03
-  mInitializedInEditor: 0
+  mInitializedInEditor: 1
   mDataSetPath: Vuforia/QuizSistemaSolar.xml
   mAspectRatio: 1.4
   mImageTargetType: 0
@@ -3437,8 +3478,8 @@ MonoBehaviour:
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
-  mTrackingOptimizationNeedsUpgrade: 1
-  mPreview: {fileID: 0}
+  mTrackingOptimizationNeedsUpgrade: 0
+  mPreview: {fileID: 1206087375}
 --- !u!4 &1206087374
 Transform:
   m_ObjectHideFlags: 0
@@ -3455,6 +3496,25 @@ Transform:
   - {fileID: 1583422460}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1206087375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206087370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1206087373}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: SOLAR-08
+  mDatasetName: Vuforia/QuizSistemaSolar.xml
+  mCastedBehaviour: {fileID: 1206087373}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1211542536
 GameObject:
   m_ObjectHideFlags: 0
@@ -3467,6 +3527,7 @@ GameObject:
   - component: {fileID: 1211542539}
   - component: {fileID: 1211542538}
   - component: {fileID: 1211542537}
+  - component: {fileID: 1211542541}
   m_Layer: 0
   m_Name: SOLAR-08
   m_TagString: Untagged
@@ -3558,7 +3619,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 0}
+  mPreview: {fileID: 1211542541}
 --- !u!4 &1211542540
 Transform:
   m_ObjectHideFlags: 0
@@ -3575,6 +3636,25 @@ Transform:
   - {fileID: 55660104}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1211542541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211542536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1211542539}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: SOLAR-08
+  mDatasetName: Vuforia/QuizSistemaSolar.xml
+  mCastedBehaviour: {fileID: 1211542539}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1213428010
 GameObject:
   m_ObjectHideFlags: 0
@@ -3864,6 +3944,7 @@ GameObject:
   - component: {fileID: 1219110461}
   - component: {fileID: 1219110460}
   - component: {fileID: 1219110459}
+  - component: {fileID: 1219110463}
   m_Layer: 0
   m_Name: SOLAR-04
   m_TagString: Untagged
@@ -3945,7 +4026,7 @@ MonoBehaviour:
   RuntimeOcclusion: 0
   RuntimeCollider: 0
   mTrackableName: SOLAR-04
-  mInitializedInEditor: 0
+  mInitializedInEditor: 1
   mDataSetPath: Vuforia/QuizSistemaSolar.xml
   mAspectRatio: 1.4
   mImageTargetType: 0
@@ -3954,8 +4035,8 @@ MonoBehaviour:
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
-  mTrackingOptimizationNeedsUpgrade: 1
-  mPreview: {fileID: 0}
+  mTrackingOptimizationNeedsUpgrade: 0
+  mPreview: {fileID: 1219110463}
 --- !u!4 &1219110462
 Transform:
   m_ObjectHideFlags: 0
@@ -3972,6 +4053,25 @@ Transform:
   - {fileID: 1034677968}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1219110463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219110458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1219110461}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: SOLAR-08
+  mDatasetName: Vuforia/QuizSistemaSolar.xml
+  mCastedBehaviour: {fileID: 1219110461}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1228920981
 GameObject:
   m_ObjectHideFlags: 0
@@ -4196,6 +4296,7 @@ GameObject:
   - component: {fileID: 1282554901}
   - component: {fileID: 1282554900}
   - component: {fileID: 1282554899}
+  - component: {fileID: 1282554903}
   m_Layer: 0
   m_Name: SOLAR-06
   m_TagString: Untagged
@@ -4277,7 +4378,7 @@ MonoBehaviour:
   RuntimeOcclusion: 0
   RuntimeCollider: 0
   mTrackableName: SOLAR-06
-  mInitializedInEditor: 0
+  mInitializedInEditor: 1
   mDataSetPath: Vuforia/QuizSistemaSolar.xml
   mAspectRatio: 1.4
   mImageTargetType: 0
@@ -4286,8 +4387,8 @@ MonoBehaviour:
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
-  mTrackingOptimizationNeedsUpgrade: 1
-  mPreview: {fileID: 0}
+  mTrackingOptimizationNeedsUpgrade: 0
+  mPreview: {fileID: 1282554903}
 --- !u!4 &1282554902
 Transform:
   m_ObjectHideFlags: 0
@@ -4304,6 +4405,25 @@ Transform:
   - {fileID: 654790732}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1282554903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282554898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1282554901}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: SOLAR-08
+  mDatasetName: Vuforia/QuizSistemaSolar.xml
+  mCastedBehaviour: {fileID: 1282554901}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1282659326
 GameObject:
   m_ObjectHideFlags: 0
@@ -5321,6 +5441,7 @@ GameObject:
   - component: {fileID: 1996719040}
   - component: {fileID: 1996719039}
   - component: {fileID: 1996719038}
+  - component: {fileID: 1996719042}
   m_Layer: 0
   m_Name: SOLAR-07
   m_TagString: Untagged
@@ -5402,7 +5523,7 @@ MonoBehaviour:
   RuntimeOcclusion: 0
   RuntimeCollider: 0
   mTrackableName: SOLAR-07
-  mInitializedInEditor: 0
+  mInitializedInEditor: 1
   mDataSetPath: Vuforia/QuizSistemaSolar.xml
   mAspectRatio: 1.4
   mImageTargetType: 0
@@ -5411,8 +5532,8 @@ MonoBehaviour:
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
-  mTrackingOptimizationNeedsUpgrade: 1
-  mPreview: {fileID: 0}
+  mTrackingOptimizationNeedsUpgrade: 0
+  mPreview: {fileID: 1996719042}
 --- !u!4 &1996719041
 Transform:
   m_ObjectHideFlags: 0
@@ -5429,6 +5550,25 @@ Transform:
   - {fileID: 170407867}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1996719042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996719037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1996719040}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: SOLAR-08
+  mDatasetName: Vuforia/QuizSistemaSolar.xml
+  mCastedBehaviour: {fileID: 1996719040}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &2036811298
 GameObject:
   m_ObjectHideFlags: 0
