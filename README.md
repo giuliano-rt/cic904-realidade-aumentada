@@ -178,16 +178,61 @@ Os PNGs individuais vão para o *Target Manager* da Vuforia; as folhas A4
 
 ---
 
-## Por que as cartas não são QR Codes "puros"
+## Por que existem duas versões das cartas
 
-A Vuforia rastreia por **pontos de característica naturais** da imagem, e não
-decodifica o QR. QR Codes isolados são parecidos entre si — os três marcadores
-de canto são idênticos em todos —, o que aumenta a chance de o rastreador
-confundir uma carta com outra.
+A Vuforia rastreia por **pontos de característica naturais** da imagem — ela
+nunca decodifica o QR — e trabalha em **tons de cinza**. Isso importou mais do
+que parecia.
 
-Por isso cada carta combina o QR Code com elementos próprios: o nome do planeta
-em tipografia grande, uma moldura colorida e uma constelação assimétrica de
-pontos e traços nas laterais, gerada de forma determinística a partir do `id`.
-São esses elementos que empurram a avaliação dos alvos no *Target Manager* para
-4–5 estrelas e deixam o rastreamento estável.
+### O problema da primeira versão
+
+As cartas da v1 (`cartas/`) tiveram 5 estrelas no *Target Manager*, mas no teste
+com as oito cartas a Vuforia reconhecia **várias ao mesmo tempo sobre uma única
+carta física** — com Vênus na frente da câmera, relatava Vênus, Marte, Saturno e
+Urano no mesmo segundo. As 5 estrelas medem se **cada imagem sozinha** tem pontos
+suficientes, não se ela se **distingue das outras** do mesmo database.
+
+Para investigar, [`tools/comparar_cartas.py`](tools/comparar_cartas.py) aproxima o
+que um rastreador faz: detecta cantos (Harris), descreve a vizinhança de cada um,
+casa os descritores entre duas cartas (teste de razão de Lowe) e mede que fração
+dos pontos encontra par. A medição reproduziu o teste real e revelou três grupos
+de cartas quase indistinguíveis — e cada grupo era formado pelas cartas cujo QR
+tinha a **mesma máscara**:
+
+| Máscara do QR | Cartas | No teste real |
+|---|---|---|
+| 1 | Vênus, Marte, Saturno, Urano | detectadas juntas |
+| 6 | Terra, Júpiter | Júpiter lido como Terra |
+| 4 | Mercúrio, Netuno | — |
+
+O QR era a maior região da carta e a mais rica em pontos. A máscara é o que
+define a aparência do miolo do código, e como `SOLAR-01` e `SOLAR-08` diferem num
+único caractere, dois QRs com a mesma máscara saíam praticamente idênticos. A
+moldura colorida, que deveria diferenciar as cartas, não contribuía nada: a cor é
+descartada antes da detecção.
+
+### A segunda versão
+
+As cartas da v2 (`cartas/v2/`, geradas por
+[`tools/gerar_cartas_v2.py`](tools/gerar_cartas_v2.py)):
+
+- usam **uma máscara diferente por carta** — o padrão QR tem exatamente 8 máscaras,
+  e o jogo tem exatamente 8 planetas. Qualquer máscara é válida: o leitor
+  identifica qual foi usada pela informação de formato gravada no código;
+- têm o QR **menor**, num canto, para ele deixar de dominar a carta;
+- não têm cabeçalho nem rodapé, que eram idênticos nas oito;
+- são cobertas por um **mapa estelar denso e único**, gerado a partir do `id`.
+
+| | v1 | v2 |
+|---|---|---|
+| Carta × ela mesma, vista pela câmera | 67% | 78% |
+| Pior par entre cartas diferentes | 66% | 34% |
+| **Margem** | **1 ponto** | **44 pontos** |
+
+Na v1, uma carta se parecia tanto com outra quanto com ela mesma. Na v2, cada
+carta se parece mais que o dobro consigo mesma do que com qualquer outra.
+
+> A medição é uma aproximação do princípio da Vuforia, cujo algoritmo é
+> proprietário — serve para **comparar versões**, não como previsão exata. A
+> prova definitiva é o teste com as cartas impressas.
 
