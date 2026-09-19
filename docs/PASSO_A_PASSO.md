@@ -66,21 +66,47 @@ Ainda em `Window → Vuforia Configuration`:
 
 | Campo | Valor | Padrão |
 |---|---|---|
-| **Max Simultaneous Tracked Images** | `8` | 1 |
-| **Device Tracker → Auto Start Tracker** | desmarcado | marcado |
+| **Max Simultaneous Tracked Images** | `1` | 1 |
+| **Device Tracker → Auto Start Tracker** | **desmarcado** | marcado |
 
-> ⚠️ **Sem essas duas mudanças o jogo reconhece a carta errada.** Elas ficam no
-> `VuforiaConfiguration.asset`, o mesmo arquivo da chave de licença, que está no
-> `.gitignore` — então **não vêm junto com o repositório** e precisam ser refeitas
-> em cada máquina.
+> ⚠️ **Com o Device Tracker ligado o jogo reconhece a carta errada.** Essa opção
+> fica no `VuforiaConfiguration.asset`, o mesmo arquivo da chave de licença, que
+> está no `.gitignore` — então **não vem junto com o repositório** e precisa ser
+> refeita em cada máquina.
 >
-> - Com **1 imagem simultânea**, a carta que acabou de sair de vista continua
->   ocupando o único espaço, e a Vuforia passa a "rastrear" a carta nova como se
->   fosse a antiga.
-> - Com o **rastreamento do dispositivo** ligado, uma carta que sai de vista vira
->   `EXTENDED_TRACKED` — a Vuforia estima onde ela estaria. Na webcam, sem sensores
->   de movimento, isso é só um palpite, e deixa os planetas já vistos flutuando
->   na tela.
+> Com o rastreamento do dispositivo ligado, uma carta que sai de vista vira
+> `EXTENDED_TRACKED`: a Vuforia estima onde ela estaria. Na webcam, sem sensores de
+> movimento, isso é só um palpite — a carta antiga segue ocupando o único espaço
+> de rastreamento e a carta nova é lida como se fosse ela.
+>
+> O limite de **1 imagem simultânea** é o certo, e foi medido: com 8, as cartas
+> parecidas iam travando nos espaços livres até sete alvos apontarem para uma
+> única carta. Com 1, a Vuforia escolhe o melhor casamento e para de procurar.
+
+### 3.3 Resolução da webcam
+
+Por padrão a Vuforia pede **640×480** de qualquer webcam no PC, o que apaga
+justamente os detalhes que diferenciam uma carta da outra. O projeto traz um
+perfil a **1280×720** para a Logitech C922 em
+`Assets/Editor/Vuforia/webcamprofiles.xml`. Na máquina de desenvolvimento ele
+também foi copiado para o arquivo da própria Vuforia, em
+`Library/PackageCache/com.ptc.vuforia.engine@…/Vuforia/Editor/EditorResources/webcamprofiles.xml`
+— a `Library/` não vai para o repositório, então em outra máquina copie o bloco
+`<webcam deviceName="c922 Pro Stream Webcam">` para lá.
+
+Para outra câmera, o `deviceName` precisa ser o nome exato que a Unity mostra
+(`WebCamTexture.devices`). A resolução real que a Vuforia recebe pode ser
+conferida em Play Mode lendo `WebCamTexture.width/height`.
+
+### 3.4 Como mostrar as cartas
+
+- **Entre com a carta de uma vez, reta e inteira no quadro.** A primeira
+  detecção é a que vale: se a carta entra deslizando, meio cortada, um sósia
+  pode vencer — e com um alvo por vez a Vuforia só reavalia depois que a carta
+  sai de vista. Se o planeta errado aparecer, tire a carta por 2 segundos e
+  mostre de novo.
+- **Mesa limpa.** Uma carta esquecida à vista ocupa o único espaço de
+  rastreamento e bloqueia todas as outras.
 
 ### 3.3 Banco de alvos
 1. No site: **My Account → Target Manager → Add Database**.
