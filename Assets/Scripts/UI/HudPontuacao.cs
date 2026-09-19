@@ -20,9 +20,18 @@ namespace ARQuiz.UI
 
         [Header("Reiniciar (opcional)")]
         [SerializeField] private Button botaoReiniciar;
+        [Tooltip("Espaco entre o texto de progresso e o botao, quando o botao aparece.")]
+        [SerializeField] private float espacoAteBotao = 16f;
+
+        private float _bordaDireitaProgresso;
 
         private void Awake()
         {
+            if (textoProgresso != null)
+            {
+                _bordaDireitaProgresso = textoProgresso.rectTransform.offsetMax.x;
+            }
+
             if (botaoReiniciar != null)
             {
                 botaoReiniciar.onClick.AddListener(AoClicarReiniciar);
@@ -79,7 +88,33 @@ namespace ARQuiz.UI
             {
                 bool terminou = total > 0 && respondidas >= total;
                 botaoReiniciar.gameObject.SetActive(terminou);
+                AbrirEspacoParaBotao(terminou);
             }
+        }
+
+        /// <summary>
+        /// Durante a partida o botao fica escondido e o texto de progresso usa a
+        /// largura toda. Quando o botao aparece, o texto termina antes dele, em vez
+        /// de ficar por baixo. A borda e calculada a partir do proprio botao, entao
+        /// continua certa se o botao mudar de tamanho.
+        /// </summary>
+        private void AbrirEspacoParaBotao(bool botaoVisivel)
+        {
+            if (textoProgresso == null)
+            {
+                return;
+            }
+
+            var rt = textoProgresso.rectTransform;
+            float direita = _bordaDireitaProgresso;
+            if (botaoVisivel)
+            {
+                var botao = (RectTransform)botaoReiniciar.transform;
+                // os dois estao ancorados na borda direita da barra, entao a borda
+                // esquerda do botao (offsetMin.x) esta no mesmo referencial
+                direita = botao.offsetMin.x - espacoAteBotao;
+            }
+            rt.offsetMax = new Vector2(direita, rt.offsetMax.y);
         }
 
         private void AoClicarReiniciar()

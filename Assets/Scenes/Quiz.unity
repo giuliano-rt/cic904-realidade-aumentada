@@ -1583,8 +1583,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.45}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -75, y: -6}
-  m_SizeDelta: {x: -150, y: -12}
+  m_AnchoredPosition: {x: -12, y: -6}
+  m_SizeDelta: {x: -24, y: -12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &481172210
 MonoBehaviour:
@@ -1637,7 +1637,7 @@ MonoBehaviour:
   m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 22
+  m_fontSizeMin: 20
   m_fontSizeMax: 30
   m_fontStyle: 0
   m_HorizontalAlignment: 4
@@ -1650,7 +1650,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
+  m_TextWrappingMode: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -2646,6 +2646,7 @@ MonoBehaviour:
   textoProgresso: {fileID: 481172210}
   barraProgresso: {fileID: 1228920983}
   botaoReiniciar: {fileID: 453051434}
+  espacoAteBotao: 16
 --- !u!114 &944891666
 MonoBehaviour:
   m_ObjectHideFlags: 0
